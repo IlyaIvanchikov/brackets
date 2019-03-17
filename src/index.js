@@ -1,6 +1,6 @@
 module.exports = function check(str, bracketsConfig) {
   var arr = str.split ('')
-  var arr1 = bracketsConfig.flat(1);
+  var arr1= [].concat.apply([], bracketsConfig);
   var result = 0;
   if (str.length % 2 != 0) {
       result = false;}
